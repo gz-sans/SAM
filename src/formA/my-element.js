@@ -14,8 +14,10 @@ export class MyElement extends LitElement{
         <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
         <script src="https://kit.fontawesome.com/f31778972e.js" crossorigin="anonymous"></script>
                 <title></title>
+            
         </head>        
         <body>
+            
         <div class="container-fluid">
         <div class="row">
             <div class="col-sm"></div>
