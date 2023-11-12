@@ -19,7 +19,7 @@ export class LoginComponent extends LitElement {
     // Validación de datos quemados (usuario y contraseña)
     if (this.username === 'usuario' && this.password === 'contraseña') {
       // Datos válidos, redirige al usuario o realiza otras acciones
-      window.location.href = 'hp.html';
+      window.location.href = 'src/dashboard/hp.html';
       alert('Inicio de sesión exitoso');
     } else {
       // Datos de inicio de sesión incorrectos, muestra un mensaje de error
@@ -29,7 +29,7 @@ export class LoginComponent extends LitElement {
 
   registros(event) {
     event.preventDefault();
-    window.location.href = 'register.html';
+    window.location.href = 'src/register/register.html';
   }
 
   render() {

@@ -7,7 +7,7 @@ class Dash extends LitElement {
    }
    redirect(event) {
     event.preventDefault();
-    window.location.href = 'src/formA/index.html';
+    window.location.href = '../formA/nosotros.html';
   }
 
   render() {
