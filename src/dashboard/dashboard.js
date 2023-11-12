@@ -5,6 +5,10 @@ class Dash extends LitElement {
   static get styles(){
       return [stylescss]
    }
+   redirect(event) {
+    event.preventDefault();
+    window.location.href = 'src/formA/index.html';
+  }
 
   render() {
     return html`
@@ -13,6 +17,9 @@ class Dash extends LitElement {
     <nav class="navbar bg-body-tertiary">
       <div class="container-fluid">
           <p class="h3">Mascotas</p>
+          <form class="text-center" @submit="${this.redirect}">
+                    <button type="submit" class="btn-danger-1">adopta</button>
+                    </form>
           <form class="d-flex" role="search">
               <button class="btn btn-outline-primary" type="submit" >Cerrar
                   sesion</button>
