@@ -10,6 +10,16 @@ class Dash extends LitElement {
     window.location.href = '../formA/nosotros.html';
   }
 
+  redirect1(event) {
+    event.preventDefault();
+    window.location.href = '../adoptar/adoptar-componente.html';
+  }
+
+  redirect2(event) {
+    event.preventDefault();
+    window.location.href = '../perritos/index.html';
+  }
+
   render() {
     return html`
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -18,8 +28,11 @@ class Dash extends LitElement {
       <div class="container-fluid">
           <p class="h3">Mascotas</p>
           <form class="text-center" @submit="${this.redirect}">
-                    <button type="submit" class="btn-danger-1">adopta</button>
+                    <button type="submit" class="btn-danger-1">nosotros</button>
                     </form>
+            <form class="text-center" @submit="${this.redirect2}">
+            <button type="submit" class="btn-danger-1">adopta aqui</button>
+            </form>
           <form class="d-flex" role="search">
               <button class="btn btn-outline-primary" type="submit" >Cerrar
                   sesion</button>

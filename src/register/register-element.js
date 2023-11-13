@@ -7,7 +7,7 @@ export class Registrer extends LitElement{
 
     salir(event) {
         event.preventDefault();
-        window.location.href = 'index.html';
+        window.location.href = '../../login.html';
       }
 
     render(){
