@@ -20,6 +20,11 @@ class Dash extends LitElement {
     window.location.href = '../perritos/index.html';
   }
 
+  cerrar(event) {
+    event.preventDefault();
+    window.location.href = '../../index.html';
+  }
+
   render() {
     return html`
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -33,7 +38,7 @@ class Dash extends LitElement {
             <form class="text-center" @submit="${this.redirect2}">
             <button type="submit" class="btn-danger-1">adopta aqui</button>
             </form>
-          <form class="d-flex" role="search">
+          <form class="d-flex"  @submit="${this.cerrar}">
               <button class="btn btn-outline-primary" type="submit" >Cerrar
                   sesion</button>
           </form>
