@@ -74,7 +74,7 @@ export class LoginComponent extends LitElement{
                    
                            <div class="mt-4">
                            <form class="text-center" @submit="${this.registrate}">
-                           <button type="submit" class="btn-danger-1">Registrate</button>
+                           <button type="submit" class="btn btn-danger-1">Registrate</button>
                            </form>
                                <div class="d-flex justify-content-center links">
                                    <a href="#">Forgot your password?</a>

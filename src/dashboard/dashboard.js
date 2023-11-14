@@ -29,21 +29,20 @@ class Dash extends LitElement {
     return html`
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <nav class="navbar bg-body-tertiary">
-      <div class="container-fluid">
-          <p class="h3">Mascotas</p>
-          <form class="text-center" @submit="${this.redirect}">
-                    <button type="submit" class="btn-danger-1">nosotros</button>
-                    </form>
-            <form class="text-center" @submit="${this.redirect2}">
-            <button type="submit" class="btn-danger-1">adopta aqui</button>
-            </form>
-          <form class="d-flex"  @submit="${this.cerrar}">
-              <button class="btn btn-outline-primary" type="submit" >Cerrar
-                  sesion</button>
-          </form>
-      </div>
-    </nav>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #61428C;">
+    <div class="container-fluid">
+        <p class="h3 text-white">Mascotas</p>
+        <form class="text-center" @submit="${this.redirect}">
+            <button type="submit" class="btn btn-danger-1 text-white">Nosotros</button>
+        </form>
+        <form class="text-center" @submit="${this.redirect2}">
+            <button type="submit" class="btn btn-danger-1 text-white" >Adoptar</button>
+        </form>
+        <form class="d-flex" @submit="${this.cerrar}">
+            <button class="btn btn-outline-primary btn-cerrar-sesion" type="submit">Cerrar sesión</button>
+        </form>
+    </div>
+</nav>
     <main>
         <section class="py-5 text-center container">
             <div class="row py-lg-5">
@@ -54,10 +53,6 @@ class Dash extends LitElement {
                           creador, etc. Hazlo breve y conciso, pero no demasiado
                           breve para que la gente no se lo salte por completo.</p>
                     <p>
-                        <a href="#" class="btn btn-primary my-2">Mostrar
-                            disponibles</a>
-                        <a href="#" class="btn btn-secondary my-2">Terminos
-                            y condiciones</a>
                     </p>
                 </div>
             </div>
@@ -81,8 +76,10 @@ class Dash extends LitElement {
                                 <div
                                     class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <button type="button"
+                                    <form class="text-center" @submit="${this.redirect2}">
+                                        <button type="submit" 
                                             class="btn btn-sm btn-outline-secondary">Adoptar</button>
+                                    </form>
                                     </div>
                                     <small class="text-body-secondary">9
                                         mins</small>
@@ -104,8 +101,10 @@ class Dash extends LitElement {
                                 <div
                                     class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <button type="button"
+                                        <form class="text-center" @submit="${this.redirect2}">
+                                        <button type="submit" 
                                             class="btn btn-sm btn-outline-secondary">Adoptar</button>
+                                    </form>
                                     </div>
                                     <small class="text-body-secondary">9
                                         mins</small>
@@ -127,78 +126,10 @@ class Dash extends LitElement {
                                 <div
                                     class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <button type="button"
+                                        <form class="text-center" @submit="${this.redirect2}">
+                                        <button type="submit" 
                                             class="btn btn-sm btn-outline-secondary">Adoptar</button>
-                                    </div>
-                                    <small class="text-body-secondary">9
-                                        mins</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <img
-                                src="https://images.unsplash.com/photo-1561037404-61cd46aa615b?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGVycm98ZW58MHx8MHx8fDA%3D"
-                                class="img-fluid" alt="...">
-                            <div class="card-body">
-                                <p class="card-text">EvaXenPhone es un
-                                    pitbull encontrado enfermo en la
-                                    localidad de Suba. Ahora tiene 5 meses y
-                                    esta fuerte y sano para ir a un buen
-                                    hogar. Tal vez el tuyo.</p>
-                                <div
-                                    class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button"
-                                            class="btn btn-sm btn-outline-secondary">Adoptar</button>
-                                    </div>
-                                    <small class="text-body-secondary">9
-                                        mins</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <img
-                                src="https://images.unsplash.com/photo-1561037404-61cd46aa615b?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGVycm98ZW58MHx8MHx8fDA%3D"
-                                class="img-fluid" alt="...">
-                            <div class="card-body">
-                                <p class="card-text">EvaXenPhone es un
-                                    pitbull encontrado enfermo en la
-                                    localidad de Suba. Ahora tiene 5 meses y
-                                    esta fuerte y sano para ir a un buen
-                                    hogar. Tal vez el tuyo.</p>
-                                <div
-                                    class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button"
-                                            class="btn btn-sm btn-outline-secondary">Adoptar</button>
-                                    </div>
-                                    <small class="text-body-secondary">9
-                                        mins</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <img
-                                src="https://images.unsplash.com/photo-1561037404-61cd46aa615b?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGVycm98ZW58MHx8MHx8fDA%3D"
-                                class="img-fluid" alt="...">
-                            <div class="card-body">
-                                <p class="card-text">EvaXenPhone es un
-                                    pitbull encontrado enfermo en la
-                                    localidad de Suba. Ahora tiene 5 meses y
-                                    esta fuerte y sano para ir a un buen
-                                    hogar. Tal vez el tuyo.</p>
-                                <div
-                                    class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button"
-                                            class="btn btn-sm btn-outline-secondary">Adoptar</button>
+                                    </form>
                                     </div>
                                     <small class="text-body-secondary">9
                                         mins</small>
@@ -221,8 +152,10 @@ class Dash extends LitElement {
                                 <div
                                     class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <button type="button"
+                                        <form class="text-center" @submit="${this.redirect2}">
+                                        <button type="submit" 
                                             class="btn btn-sm btn-outline-secondary">Adoptar</button>
+                                    </form>
                                     </div>
                                     <small class="text-body-secondary">9
                                         mins</small>
@@ -244,8 +177,10 @@ class Dash extends LitElement {
                                 <div
                                     class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <button type="button"
+                                        <form class="text-center" @submit="${this.redirect2}">
+                                        <button type="submit" 
                                             class="btn btn-sm btn-outline-secondary">Adoptar</button>
+                                    </form>
                                     </div>
                                     <small class="text-body-secondary">9
                                         mins</small>
@@ -267,8 +202,86 @@ class Dash extends LitElement {
                                 <div
                                     class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <button type="button"
+                                        <form class="text-center" @submit="${this.redirect2}">
+                                        <button type="submit" 
                                             class="btn btn-sm btn-outline-secondary">Adoptar</button>
+                                    </form>
+                                    </div>
+                                    <small class="text-body-secondary">9
+                                        mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img
+                                src="https://images.unsplash.com/photo-1561037404-61cd46aa615b?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGVycm98ZW58MHx8MHx8fDA%3D"
+                                class="img-fluid" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">EvaXenPhone es un
+                                    pitbull encontrado enfermo en la
+                                    localidad de Suba. Ahora tiene 5 meses y
+                                    esta fuerte y sano para ir a un buen
+                                    hogar. Tal vez el tuyo.</p>
+                                <div
+                                    class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <form class="text-center" @submit="${this.redirect2}">
+                                        <button type="submit" 
+                                            class="btn btn-sm btn-outline-secondary">Adoptar</button>
+                                    </form>
+                                    </div>
+                                    <small class="text-body-secondary">9
+                                        mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img
+                                src="https://images.unsplash.com/photo-1561037404-61cd46aa615b?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGVycm98ZW58MHx8MHx8fDA%3D"
+                                class="img-fluid" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">EvaXenPhone es un
+                                    pitbull encontrado enfermo en la
+                                    localidad de Suba. Ahora tiene 5 meses y
+                                    esta fuerte y sano para ir a un buen
+                                    hogar. Tal vez el tuyo.</p>
+                                <div
+                                    class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <form class="text-center" @submit="${this.redirect2}">
+                                        <button type="submit" 
+                                            class="btn btn-sm btn-outline-secondary">Adoptar</button>
+                                    </form>
+                                    </div>
+                                    <small class="text-body-secondary">9
+                                        mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img
+                                src="https://images.unsplash.com/photo-1561037404-61cd46aa615b?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGVycm98ZW58MHx8MHx8fDA%3D"
+                                class="img-fluid" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">EvaXenPhone es un
+                                    pitbull encontrado enfermo en la
+                                    localidad de Suba. Ahora tiene 5 meses y
+                                    esta fuerte y sano para ir a un buen
+                                    hogar. Tal vez el tuyo.</p>
+                                <div
+                                    class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <form class="text-center" @submit="${this.redirect2}">
+                                        <button type="submit" 
+                                            class="btn btn-sm btn-outline-secondary">Adoptar</button>
+                                    </form>
                                     </div>
                                     <small class="text-body-secondary">9
                                         mins</small>

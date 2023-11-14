@@ -7,7 +7,7 @@ export default css`
     margin-left: 70px;
 }
 .card-img-top{
-    width: 300px;
+    width: 412px;
     height : 300px;
 }
 

@@ -20,17 +20,31 @@ export class Home extends LitElement {
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #61428C;">
       <div class="container">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#">Inicio</a>
-            <button type="button" class="navbar-brand btn" style="color: #61428C !important;">Adopta</button>
-            <a class="navbar-brand" href="./src/formA/nosotros.html">Blog</a>
-            <a class="navbar-brand" href="#">Contactenos</a>
-            <a class="navbar-brand" href="../../login.html">login</a>
+          <a class="navbar-brand" href="#" style="color: white;">Inicio</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                      <a class="nav-link btn" href="#" style="color: #61428C;">Adopta</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="../../src/blog/blog.html" style="color: white;">Blog</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="../../src/contact/contac.html" style="color: white;">Contactenos</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="../../login.html" style="color: white;">Login</a>
+                  </li>
+              </ul>
           </div>
-        </nav>
+      </div>
+  </nav>
       </div>
     </nav>
         <div class="container-1">
@@ -121,9 +135,9 @@ export class Home extends LitElement {
       <div class="container">
         <p>&copy; 2023 Fundación SAM - Todos los derechos reservados</p>
         <ul>
-          <li><a href="politica-de-privacidad.html">Política de Privacidad</a></li>
-          <li><a href="terminos-y-condiciones.html">Términos y Condiciones</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="../../src/terms/term.html">Política de Privacidad</a></li>
+          <li><a href="../../src/terms/term.html">Términos y Condiciones</a></li>
+          <li><a href="./src/formA/nosotros.html">Contacto</a></li>
         </ul>
       </div>
     </footer>
