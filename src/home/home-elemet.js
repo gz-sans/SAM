@@ -9,6 +9,16 @@ export class Home extends LitElement {
     event.preventDefault();
     window.location.href = "../../login.html";
   }
+  redirect1(event) {
+    event.preventDefault();
+    console.log("Redirecting to ../perritos/index.html");
+    window.location.href = "../../src/formA/nosotros.html";
+  }
+  
+  redirect2(event) {
+    event.preventDefault();
+    window.location.href = "../../src/perritos/index.html";
+  }
 
   render() {
     return html`<head>
@@ -95,42 +105,48 @@ export class Home extends LitElement {
         </div>
       </div>
     </div>
-    <ul class="apoyo">
-      <li>
-        <span class="icon-cayuda"></span>
-        <div class="box-txt">
-          <img class="imagen" src="/img/ayudar.png"><br><br>
-          <h3>COMO AYUDAR</h3>
-          <p>Cada día se ven miles de animales abandonados en la calle que no tienen quién se responsabilice por ellos.
-            Maneras de ayudar hay muchas, entre ellas: Puedes ser voluntario, ser hogar temporar o apadrinar uno de estos
-            animalitos en algún albergue.</p>
-          <a class="btn btn-lg" href="/por-que-adoptar">Conocer más</a>
-        </div>
-      </li>
-      <li>
-        <span class="icon-mperdida"></span>
-        <div class="box-txt">
-          <img class="imagen" src="/img/apadrinar.png"><br><br>
-          <h3>APADRINAR</h3>
-          <p>Si no puedes adoptar y deseas ayudar a un animal lo puedes apadrinar. Consiste en ofrecer un aporte
-            voluntario mensual para su sustento hasta el día en que sea adoptado. Con esto, el animal que escojas, ya sea
-            de la calle o de alguna fundación existente tendrá una buena calidad de vida mientras encuentra un verdadero
-            hogar.</p>
-          <a class="btn btn-lg" href="./src/formA/nosotros.html">Conocer más</a>
-        </div>
-      </li>
-      <li>
-        <span class="icon-huella"></span>
-        <div class="box-txt">
-          <img class="imagen" src="/img/adoptar.png"><br><br>
-          <h3>ADOPTAR</h3>
-          <p>No compres, ADOPTA. Adoptando salvas la vida de dos animales, la de tu nuevo amigo y la del que ocupará su
-            lugar, tan solo escoge la mascota de la cual quieres recibir todo su amor y compañía, diligencia el formulario
-            y en poco tiempo nos comunicaremos contigo.</p>
-          <a class="btn btn-lg" href="./src/formA/nosotros.html">Conocer más</a>
-        </div>
-      </li>
-    </ul>
+     <ul class="apoyo">
+        <li>
+          <span class="icon-cayuda"></span>
+          <div class="box-txt">
+            <img class="imagen" src="/img/ayudar.png"><br><br>
+            <h3>COMO AYUDAR</h3>
+            <p>Cada día se ven miles de animales abandonados en la calle que no tienen quién se responsabilice por ellos.
+              Maneras de ayudar hay muchas, entre ellas: Puedes ser voluntario, ser hogar temporar o apadrinar uno de estos
+              animalitos en algún albergue.</p><br><br>
+              <form class="d-flex" @submit="${this.redirect1}">
+                <button class="btn btn-secondary" style="background-color: #61428c;">Conocer más</button>
+              </form>
+          </div>
+        </li>
+        <li>
+          <span class="icon-mperdida"></span>
+          <div class="box-txt">
+            <img class="imagen" src="/img/apadrinar.png"><br><br>
+            <h3>APADRINAR</h3>
+            <p>Si no puedes adoptar y deseas ayudar a un animal lo puedes apadrinar. Consiste en ofrecer un aporte
+              voluntario mensual para su sustento hasta el día en que sea adoptado. Con esto, el animal que escojas, ya sea
+              de la calle o de alguna fundación existente tendrá una buena calidad de vida mientras encuentra un verdadero
+              hogar.</p>
+              <form class="d-flex" @submit="${this.redirect2}">
+                <button class="btn btn-secondary" style="background-color: #61428c;">Conocer más</button>
+              </form>
+          </div>
+        </li>
+        <li>
+          <span class="icon-huella"></span>
+          <div class="box-txt">
+            <img class="imagen" src="/img/adoptar.png"><br>
+            <h3>ADOPTAR</h3>
+            <p>No compres, ADOPTA. Adoptando salvas la vida de dos animales, la de tu nuevo amigo y la del que ocupará su
+              lugar, tan solo escoge la mascota de la cual quieres recibir todo su amor y compañía, diligencia el formulario
+              y en poco tiempo nos comunicaremos contigo.</p><br><br>
+              <form class="d-flex" @submit="${this.redirect2}">
+                <button class="btn btn-secondary" style="background-color: #61428c;">Conocer más</button>
+              </form>
+          </div>
+        </li>
+      </ul>
     <footer>
       <div class="container">
         <p>&copy; 2023 Fundación SAM - Todos los derechos reservados</p>

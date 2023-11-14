@@ -3,23 +3,41 @@ import { css } from "lit-element";
 
 export default css`
 
-:host {
-    display: block;
-    color: white; /* Texto en color blanco */
-    background-color: purple; /* Fondo en color morado */
-    padding: 20px;
-  }
+body {
+  background-color: #FFFFFF;
+  color: #6B5B95;
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  padding: 20px;
+}
 
-  h2 {
-    color: purple; /* Encabezados en color morado */
-  }
+h1 {
+  color: #6B5B95;
+  text-align: center;
+  font-size: 24px;
+}
 
-  h3 {
-    color: white; /* Encabezados secundarios en color blanco */
-  }
+h2 {
+  color: #6B5B95;
+  font-size: 20px;
+}
 
-  p {
-    margin: 10px 0;
-  }
+p {
+  margin-top: 0;
+  text-align: justify;
+}
 
+.salir-button {
+  background-color: #6B5B95;
+  color: #FFFFFF;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.salir-button:hover {
+  background-color: #4B3F72;
+}
 `

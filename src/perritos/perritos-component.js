@@ -20,7 +20,7 @@ export class Perritos extends LitElement{
     
       redirect2(event) {
         event.preventDefault();
-        window.location.href = '../dashboard/hp.html';
+        window.location.href = "../../login.html";
       }
     
       cerrar(event) {
@@ -41,211 +41,112 @@ export class Perritos extends LitElement{
 <body>
 <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #61428C;">
 <div class="container-fluid">
-    <p class="h3 text-white">Mascotas</p>
+    <p class="h3 text-white">SAM</p>
     <form class="text-center" @submit="${this.redirect}">
         <button type="submit" class="btn btn-danger-1 text-white">Nosotros</button>
     </form>
     <form class="text-center" @submit="${this.redirect2}">
-        <button type="submit" class="btn btn-danger-1 text-white" >dashboard</button>
+        <button type="submit" class="btn btn-danger-1 text-white" >Ingresar</button>
     </form>
     <form class="d-flex" @submit="${this.cerrar}">
         <button class="btn btn-outline-primary btn-cerrar-sesion" type="submit">Cerrar sesión</button>
     </form>
 </div>
 </nav>
-<div class="contenido">
-    <div class="container mt-4">
-        <div class="row d-flex">
-            <div class="col-md-4 mb-4">
-                <div class="card mb-4">
-                    <center>
-                    <div class="card-mascotas">
-                        <img src="../../resources/perrito7.jpg" class="card-img-top" alt="TONNI">
-                        <div class="card-body">
-                            <h5 class="card-title">Título de la tarjeta</h5>
-                            <p class="card-text">Texto de la tarjeta</p>
-                            <form @submit="${this.registros}">
-                                <button class="btn btn-secondary" style="background-color: #61428c;">Adoptame</button>
-                            </form>
-                        </div>
-                    </div>
-                    </center>
-                </div>
+<div class="container">
+<div class="row row-cols-3 my-3">
+    <div class="col mb-3">
+        <div class="card" style="width: 20rem;">
+        <img style="height: 13rem; background-position: center center; background-repeat: no-repeat; background-size: cover ; background-image: url('../../resources/perrito1.jpg');" class="card-img-top" >
+            <div class="card-body">
+              <h5 class="card-title border-bottom py-2">TONNI</h5>
+              <p><strong>Edad:</strong><span class="form-control-sm">4 meses</span></p>
+              <p><strong>Sexo:</strong><span class="form-control-sm">Masculino</span></p>
+              <p><strong>Color:</strong><span class="form-control-sm">Negro - Blanco</span></p>
+              <p><strong>Vacunado:</strong><span class="form-control-sm">Si</span></p>
+              <form @submit="${this.redirect2}">
+                  <button class="btn btn-secondary" style="background-color: #61428c;">Adoptame</button>
+              </form>
             </div>
-            <div class="col-md-4 mb-4">
-                <div class="card mb-4">
-                    <center>
-                        <img src="../../resources/perrito8.jpg" class="card-img-top" alt="Descripción de la imagen">
-                        <div class="card-body">
-                            <h5 class="card-title">Título de la tarjeta</h5>
-                            <p class="card-text">Texto de la tarjeta</p>
-                            <form @submit="${this.registros}">
-                                <button class="btn btn-secondary" style="background-color: #61428c;">Adoptame</button>
-                            </form>
-                        </div>
-                    </center>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card mb-4">
-                <center>
-                    <img src="../../resources/perrito9.jpg" class="card-img-top" alt="Descripción de la imagen">
-                    <div class="card-body">
-                        <h5 class="card-title">Título de la tarjeta</h5>
-                        <p class="card-text">Texto de la tarjeta</p>
-                        <form @submit="${this.registros}">
-                            <button class="btn btn-secondary" style="background-color: #61428c;">Adoptame</button>
-                        </form>
-                    </div>
-                </center>
-                </div>
-            </div>
-        </div>
+          </div>
     </div>
-
-        <div class="container mt-4">
-            <div class="row d-flex">
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                    <center>
-                        <img src="../../resources/perrito4.jpg" class="card-img-top" alt="TONNI">
-                        <div class="card-body">
-                            <h5 class="card-title">Título de la tarjeta</h5>
-                            <p class="card-text">Texto de la tarjeta</p>
-                            <form @submit="${this.registros}">
-                                <button class="btn btn-secondary" style="background-color: #61428c;">Adoptame</button>
-                            </form>
-                        </div>
-                    </center>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                    <center>
-                        <img src="../../resources/perrito5.jpg" class="card-img-top" alt="Descripción de la imagen">
-                        <div class="card-body">
-                            <h5 class="card-title">Título de la tarjeta</h5>
-                            <p class="card-text">Texto de la tarjeta</p>
-                            <form @submit="${this.registros}">
-                                <button class="btn btn-secondary" style="background-color: #61428c;">Adoptame</button>
-                            </form>
-                        </div>
-                    </center>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                    <center>
-                        <img src="../../resources/perrito6.jpg" class="card-img-top" alt="Descripción de la imagen">
-                        <div class="card-body">
-                            <h5 class="card-title">Título de la tarjeta</h5>
-                            <p class="card-text">Texto de la tarjeta</p>
-                            <form @submit="${this.registros}">
-                                <button class="btn btn-secondary" style="background-color: #61428c;">Adoptame</button>
-                            </form>
-                        </div>
-                    </center>
-                    </div>
-                </div>
-        
+    <div class="col mb-3">
+        <div class="card" style="width: 20rem;">
+            <img style="height: 13rem; background-position: center center; background-repeat: no-repeat; background-size: cover ; background-image: url('https://images.unsplash.com/photo-1519052537078-e6302a4968d4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGNhdCU3QnxlbnwwfHwwfHx8MA%3D%3D');" class="card-img-top" >
+            <div class="card-body">
+              <h5 class="card-title border-bottom py-2">JACK</h5>
+              <p><strong>Edad:</strong><span class="form-control-sm">1 año</span></p>
+              <p><strong>Sexo:</strong><span class="form-control-sm">Masculino</span></p>
+              <p><strong>Color:</strong><span class="form-control-sm">Amarillo</span></p>
+              <p><strong>Vacunado:</strong><span class="form-control-sm">Si</span></p>
+              <form @submit="${this.redirect2}">
+                  <button class="btn btn-secondary" style="background-color: #61428c;">Adoptame</button>
+              </form>
             </div>
-        </div>
-        <div class="container mt-4">
-            <div class="row d-flex">
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                    <center>
-                        <img src="../../resources/gatito1.jpg" class="card-img-top" alt="TONNI">
-                        <div class="card-body">
-                            <h5 class="card-title">Título de la tarjeta</h5>
-                            <p class="card-text">Texto de la tarjeta</p>
-                            <form @submit="${this.registros}">
-                                <button class="btn btn-secondary" style="background-color: #61428c;">Adoptame</button>
-                            </form>
-                        </div>
-                    </center>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                    <center>
-                        <img src="../../resources/gatito2.jpg" class="card-img-top" alt="Descripción de la imagen">
-                        <div class="card-body">
-                            <h5 class="card-title">Título de la tarjeta</h5>
-                            <p class="card-text">Texto de la tarjeta</p>
-                            <form @submit="${this.registros}">
-                                <button class="btn btn-secondary" style="background-color: #61428c;">Adoptame</button>
-                            </form>
-                        </div>
-                    </center>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                    <center>
-                        <img src="../../resources/gatito3.jpg" class="card-img-top" alt="Descripción de la imagen">
-                        <div class="card-body">
-                            <h5 class="card-title">Título de la tarjeta</h5>
-                            <p class="card-text">Texto de la tarjeta</p>
-                            <form @submit="${this.registros}">
-                                <button class="btn btn-secondary" style="background-color: #61428c;">Adoptame</button>
-                            </form>
-                        </div>
-                        </center>
-                    </div>
-                </div>
-        
-            </div>
-            
-        </div>
-        <div class="container mt-4">
-            <div class="row d-flex">
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                    <center>
-                        <img src="../../resources/gatito4.jpg" class="card-img-top" alt="TONNI">
-                        <div class="card-body">
-                            <h5 class="card-title">Título de la tarjeta</h5>
-                            <p class="card-text">Texto de la tarjeta</p>
-                            <form @submit="${this.registros}">
-                                <button class="btn btn-secondary" style="background-color: #61428c;">Adoptame</button>
-                            </form>
-                        </div>
-                    </center>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                    <center>
-                        <img src="../../resources/gatito5.jpg" class="card-img-top" alt="Descripción de la imagen">
-                        <div class="card-body">
-                            <h5 class="card-title">Título de la tarjeta</h5>
-                            <p class="card-text">Texto de la tarjeta</p>
-                            <form @submit="${this.registros}">
-                                <button class="btn btn-secondary" style="background-color: #61428c;">Adoptame</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                    <center>
-                        <img src="../../resources/gatito6.jpg" class="card-img-top" alt="Descripción de la imagen">
-                        <div class="card-body">
-                            <h5 class="card-title">Título de la tarjeta</h5>
-                            <p class="card-text">Texto de la tarjeta</p>
-                            <form @submit="${this.registros}">
-                                <button class="btn btn-secondary" style="background-color: #61428c;">Adoptame</button>
-                            </form>
-                        </div>
-                    </center>
-                    </div>
-                </div>
-        
-            </div>
-        </div>
-        </div>
+          </div>
     </div>
+    <div class="col mb-3">
+        <div class="card" style="width: 20rem;">
+            <img style="height: 13rem; background-position: center center; background-repeat: no-repeat; background-size: cover ; background-image: url('../../resources/perrito3.jpg');" class="card-img-top" >
+            <div class="card-body">
+              <h5 class="card-title border-bottom py-2">MOTAS</h5>
+              <p><strong>Edad:</strong><span class="form-control-sm">2 año</span></p>
+              <p><strong>Sexo:</strong><span class="form-control-sm">Hembra</span></p>
+              <p><strong>Color:</strong><span class="form-control-sm">Blanco</span></p>
+              <p><strong>Vacunado:</strong><span class="form-control-sm">Si</span></p>
+              <form @submit="${this.redirect2}">
+                  <button class="btn btn-secondary" style="background-color: #61428c;">Adoptame</button>
+              </form>
+            </div>
+          </div>
+    </div>
+    <div class="col mb-3">
+        <div class="card" style="width: 20rem;">
+            <img style="height: 13rem; background-position: center center; background-repeat: no-repeat; background-size: cover ; background-image: url('https://images.unsplash.com/photo-1519052537078-e6302a4968d4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGNhdCU3QnxlbnwwfHwwfHx8MA%3D%3D');" class="card-img-top" >
+            <div class="card-body">
+              <h5 class="card-title border-bottom py-2">TOM</h5>
+              <p><strong>Edad:</strong><span class="form-control-sm">3 año</span></p>
+              <p><strong>Sexo:</strong><span class="form-control-sm">Masculino</span></p>
+              <p><strong>Color:</strong><span class="form-control-sm">Blanco</span></p>
+              <p><strong>Vacunado:</strong><span class="form-control-sm">Si</span></p>
+              <form @submit="${this.redirect2}">
+                  <button class="btn btn-secondary" style="background-color: #61428c;">Adoptame</button>
+              </form>
+            </div>
+          </div>
+    </div>
+    <div class="col mb-3">
+        <div class="card" style="width: 20rem;">
+            <img style="height: 13rem; background-position: center center; background-repeat: no-repeat; background-size: cover ; background-image: url('https://images.unsplash.com/photo-1519052537078-e6302a4968d4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGNhdCU3QnxlbnwwfHwwfHx8MA%3D%3D');" class="card-img-top" >
+            <div class="card-body">
+              <h5 class="card-title border-bottom py-2">KIRA</h5>
+              <p><strong>Edad:</strong><span class="form-control-sm">1 año</span></p>
+              <p><strong>Sexo:</strong><span class="form-control-sm">Hembra</span></p>
+              <p><strong>Color:</strong><span class="form-control-sm">Café</span></p>
+              <p><strong>Vacunado:</strong><span class="form-control-sm">Si</span></p>
+              <form @submit="${this.redirect2}">
+                  <button class="btn btn-secondary" style="background-color: #61428c;">Adoptame</button>
+              </form>
+            </div>
+          </div>
+    </div>
+    <div class="col mb-3">
+        <div class="card" style="width: 20rem;">
+            <img style="height: 13rem; background-position: center center; background-repeat: no-repeat; background-size: cover ; background-image: url('https://images.unsplash.com/photo-1519052537078-e6302a4968d4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGNhdCU3QnxlbnwwfHwwfHx8MA%3D%3D');" class="card-img-top" >
+            <div class="card-body">
+              <h5 class="card-title border-bottom py-2">MICHI</h5>
+              <p><strong>Edad:</strong><span class="form-control-sm">1 año</span></p>
+              <p><strong>Sexo:</strong><span class="form-control-sm">Masculino</span></p>
+              <p><strong>Color:</strong><span class="form-control-sm">Blanco - Café</span></p>
+              <p><strong>Vacunado:</strong><span class="form-control-sm">Si</span></p>
+              <form @submit="${this.redirect2}">
+                  <button class="btn btn-secondary" style="background-color: #61428c;">Adoptame</button>
+              </form>
+            </div>
+          </div>
+    </div>
+</div>
+</div>
 
 </body>
 

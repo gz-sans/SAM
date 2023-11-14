@@ -1,30 +1,22 @@
-import { LitElement,html } from "lit-element";
-import styleCssn from './register-style';
-export class Registrer extends LitElement{
-    static get styles(){
-        return[styleCssn];
-    }
+import { LitElement, html } from "lit-element";
+import styleCssn from "./register-style";
+export class Registrer extends LitElement {
+  static get styles() {
+    return [styleCssn];
+  }
 
-    salir(event) {
-        event.preventDefault();
-        window.location.href = '../../login.html';
-      }
+  salir(event) {
+    event.preventDefault();
+    window.location.href = "../../login.html";
+  }
 
-    render(){
-        return html`
+  render() {
+    return html`
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
         <script src="https://kit.fontawesome.com/f31778972e.js" crossorigin="anonymous"></script> 
         <body>
-            <nav class="navbar bg-body-tertiary">
-                <div class="container-fluid">
-                    <p class="h3">Mascotas</p>
-                    <form class="d-flex" role="search">
-                        <button class="btn btn-primary" type="submit">Ingresar</button>
-                    </form>
-                </div>
-            </nav>
         <div class="container-fluid">
         <div class="row">
             <div class="col-sm"></div>
@@ -94,7 +86,6 @@ export class Registrer extends LitElement{
     </body>
         </html>
         `;
-
-    }
+  }
 }
-customElements.define('register-element',Registrer);
+customElements.define("register-element", Registrer);
